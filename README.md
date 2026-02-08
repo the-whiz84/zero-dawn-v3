@@ -1,5 +1,7 @@
 # Zero Dawn v3 🚀
 
+![The-Whiz Portfolio Preview](public/assets/img/preview.png)
+
 The third iteration of my personal portfolio website, featuring a **terminal-inspired aesthetic** with dark mode visuals, custom typography (Geist Mono), and electric violet accents.
 
 **Live Demo**: [v3.the-whiz.dev](https://v3.the-whiz.dev)
