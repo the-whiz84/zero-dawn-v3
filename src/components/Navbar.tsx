@@ -102,13 +102,15 @@ export function Navbar() {
                   target={item.external ? "_blank" : undefined}
                   className={cn(
                     "relative px-5 py-2.5 rounded-full transition-all duration-300 text-sm font-medium group overflow-hidden",
-                    isActive 
-                      ? "text-white bg-white/10 shadow-[0_0_10px_rgba(255,255,255,0.1)]" 
-                      : "text-muted-foreground hover:text-white"
+                    item.external
+                      ? "text-primary hover:text-primary/80 hover:bg-primary/10"
+                      : isActive 
+                        ? "text-primary bg-primary/10 border border-primary/30 shadow-[0_0_10px_rgba(139,92,246,0.3)]" 
+                        : "text-muted-foreground hover:text-white"
                   )}
                 >
                   <span className="relative z-10">{item.label}</span>
-                  {!isActive && (
+                  {!isActive && !item.external && (
                     <span className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full" />
                   )}
                 </Link>
@@ -144,7 +146,12 @@ export function Navbar() {
                     href={item.href}
                     target={item.external ? "_blank" : undefined}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-foreground hover:text-primary transition-colors duration-200 text-base font-medium block py-3 px-4 hover:bg-white/5 rounded-lg"
+                    className={cn(
+                      "transition-colors duration-200 text-base font-medium block py-3 px-4 hover:bg-white/5 rounded-lg",
+                      item.external
+                        ? "text-primary hover:text-primary/80"
+                        : "text-foreground hover:text-primary"
+                    )}
                   >
                     {item.label}
                   </Link>
