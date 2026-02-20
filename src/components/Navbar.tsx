@@ -74,7 +74,7 @@ export function Navbar() {
       <nav className="container mx-auto px-6 flex items-center justify-between">
         <Link 
           href="/" 
-          className="relative w-16 h-16 md:w-24 md:h-24 hover:scale-110 transition-transform duration-300"
+          className="relative w-10 h-10 md:w-12 md:h-12 hover:scale-110 transition-transform duration-300"
           onClick={(e) => {
             if (pathname === "/") {
               e.preventDefault();
