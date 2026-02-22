@@ -91,7 +91,7 @@ export function Experience() {
 
             {experience.map((item, index) => (
               <TimelineItem key={`${item.company}-${item.role}-${index}`} index={index} isLeft={index % 2 === 0}>
-                <div className="glass rounded-2xl p-6 hover:glow transition-all duration-300">
+                <div className="group glass rounded-2xl p-6 hover:glow transition-all duration-300">
                   <div className="flex gap-4">
                     <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-card flex items-center justify-center overflow-hidden">
                       <Image
@@ -103,7 +103,7 @@ export function Experience() {
                       />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h4 className="font-bold text-lg text-foreground">{item.role}</h4>
+                      <h4 className="font-bold text-lg text-foreground group-hover:text-primary transition-colors">{item.role}</h4>
                       <p className="text-primary text-sm font-medium">{item.company}</p>
                       <p className="text-muted-foreground text-xs mt-1">{item.period}</p>
                       <ul className="mt-4 space-y-2">
