@@ -9,12 +9,7 @@ export function Projects() {
     <section id="projects" className="py-20 relative overflow-hidden bg-background">
       {/* Background/Grid */}
       <div 
-        className="absolute inset-0 opacity-[0.03] pointer-events-none"
-        style={{
-          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)`,
-          backgroundSize: "20px 20px",
-        }}
+        className="absolute inset-0 opacity-[0.03] pointer-events-none bg-grid-pattern"
       />
       
       <div className="container mx-auto px-6 relative z-10">

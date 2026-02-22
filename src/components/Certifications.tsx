@@ -8,7 +8,7 @@ import { certifications } from "@/data";
 
 export function Certifications() {
   return (
-    <section id="certifications" className="relative overflow-hidden flex flex-col items-center" style={{ paddingTop: "3rem", paddingBottom: "3rem" }}>
+    <section id="certifications" className="py-12 relative overflow-hidden flex flex-col items-center">
       {/* Background */}
       <div className="absolute inset-0 bg-transparent" />
       
@@ -23,7 +23,7 @@ export function Certifications() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             My <span className="gradient-text text-glow">Certifications</span>
           </h2>
-          <p className="text-primary font-mono text-xl md:text-2xl tracking-widest uppercase" style={{ marginBottom: "3rem" }}>Continuous Learning</p>
+          <p className="text-primary font-mono text-xl md:text-2xl tracking-widest uppercase mb-12">Continuous Learning</p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -43,6 +43,7 @@ export function Certifications() {
                     src={cert.image}
                     alt={cert.title}
                     fill
+                    sizes="128px"
                     className="object-contain rounded-full relative z-10"
                   />
                 </div>

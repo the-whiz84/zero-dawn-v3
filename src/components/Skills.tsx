@@ -29,12 +29,7 @@ export function Skills() {
     <section id="skills" className="py-20 relative bg-background overflow-hidden">
       {/* Background Matrix Effect */}
       <div 
-        className="absolute inset-0 opacity-[0.02] pointer-events-none"
-        style={{
-          backgroundImage: `linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)`,
-          backgroundSize: "30px 30px",
-        }}
+        className="absolute inset-0 opacity-[0.02] pointer-events-none bg-grid-pattern"
       />
 
       <div className="container mx-auto px-6 relative z-10">

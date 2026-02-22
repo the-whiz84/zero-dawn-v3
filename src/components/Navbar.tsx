@@ -96,7 +96,8 @@ export function Navbar() {
           <Image 
             src="/assets/img/navbar-logo.webp" 
             alt="TheWhiz Logo" 
-            fill 
+            fill
+            sizes="48px"
             className="object-contain scale-[1.0]"
             priority
           />

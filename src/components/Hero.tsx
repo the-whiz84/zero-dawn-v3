@@ -35,16 +35,11 @@ export function Hero({ repoCount }: HeroProps) {
     <section className="min-h-screen flex flex-col justify-start md:justify-center items-center relative overflow-hidden bg-background pt-40 pb-20">
       {/* Floating Orbs */}
       <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] animate-pulse-glow" />
-      <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-accent/20 rounded-full blur-[120px] animate-float" style={{ animationDelay: "2s" }} />
+      <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-accent/20 rounded-full blur-[120px] animate-float [animation-delay:2s]" />
 
       {/* Background Matrix/Grid Effect (Subtle) */}
       <div 
-        className="absolute inset-0 opacity-[0.05] pointer-events-none"
-        style={{
-          backgroundImage: `linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)`,
-          backgroundSize: "40px 40px",
-        }}
+        className="absolute inset-0 opacity-[0.05] pointer-events-none bg-grid-pattern"
       />
 
       <div className="container px-4 text-center z-10">

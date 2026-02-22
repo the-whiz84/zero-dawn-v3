@@ -55,7 +55,7 @@ function TimelineItem({ index, isLeft, children }: TimelineItemProps) {
 
 export function Experience() {
   return (
-    <section id="experience" className="relative overflow-hidden flex flex-col items-center" style={{ paddingTop: "3rem", paddingBottom: "3rem" }}>
+    <section id="experience" className="py-12 relative overflow-hidden flex flex-col items-center">
       {/* Subtle background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-secondary/10 to-transparent" />
 
@@ -79,8 +79,7 @@ export function Experience() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="text-primary font-mono text-xl md:text-2xl tracking-widest uppercase flex items-center justify-center gap-3 text-center"
-            style={{ marginBottom: "3rem" }}
+            className="text-primary font-mono text-xl md:text-2xl tracking-widest uppercase flex items-center justify-center gap-3 text-center mb-12"
           >
             <Briefcase className="text-primary" size={28} />
             Operational History

@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: "Personal portfolio of Radu Chiriac - Tech enthusiast, Linux lover, Python developer, and HPC Technical Engineer.",
     images: [
       {
-        url: "/assets/img/favicon.png",
+        url: "/assets/img/favicon.webp",
         width: 400,
         height: 400,
         alt: "Radu Chiriac - TheWhiz",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: "Radu Chiriac | TheWhiz Portfolio",
     description: "Personal portfolio of Radu Chiriac - Tech enthusiast, Linux lover, and Python developer.",
     creator: "@the_whiz84",
-    images: ["/assets/img/favicon.png"],
+    images: ["/assets/img/favicon.webp"],
   },
   robots: {
     index: true,

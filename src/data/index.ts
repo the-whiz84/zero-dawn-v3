@@ -63,7 +63,7 @@ export const projects: Project[] = [
     title: "Zero-Dawn v2",
     description:
       "The second iteration of my personal portfolio website, built to showcase my growing skills and projects. Created using Python, Flask and Bootstrap 5.",
-    image: "/assets/img/project-v2-updated.png",
+    image: "/assets/img/project-v2-updated.webp",
     link: "https://github.com/the-whiz84/zero-dawn-v2",
     linkLabel: "View Code",
     tags: ["Python", "Flask", "Bootstrap 5"],
@@ -246,7 +246,7 @@ export const skills: Skill[] = [
 export const certifications: Certification[] = [
   {
     title: "AWS Certified Solutions Architect – Associate",
-    image: "/assets/img/logos/aws.png",
+    image: "/assets/img/logos/aws.webp",
     description:
       "Validates ability to design and deploy secure, scalable, and cost-effective systems on AWS.",
     link: "https://www.credly.com/badges/c75558c2-7879-40b0-aa16-be2c78d56971/public_url",
