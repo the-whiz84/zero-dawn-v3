@@ -24,7 +24,7 @@ export function Footer() {
       <div className="absolute inset-0 bg-gradient-to-t from-secondary/50 via-background to-background" />
       
       {/* Subtle glow effect */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-primary/5 blur-[100px] rounded-full" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-primary/5 blur-[100px] rounded-full pointer-events-none" />
 
       <div className="relative z-10 container mx-auto px-6 lg:px-12 pb-12">
         {/* Main Footer Content */}

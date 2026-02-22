@@ -49,13 +49,23 @@ export function Navbar() {
       },
       { 
         threshold: [0, 0.2, 0.4, 0.6, 0.8, 1],
-        rootMargin: "-20% 0px -20% 0px" 
+        rootMargin: "-40% 0px -40% 0px" 
       }
     );
 
-    document.querySelectorAll("section[id]").forEach((section) => {
-      observer.observe(section);
-    });
+    const observeSections = () => {
+      const sections = document.querySelectorAll("section[id]");
+      if (sections.length === 0) {
+        // Retry if Next.js Server Components haven't streamed into the DOM yet
+        setTimeout(observeSections, 100);
+        return;
+      }
+      sections.forEach((section) => {
+        observer.observe(section);
+      });
+    };
+
+    observeSections();
 
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -74,6 +84,7 @@ export function Navbar() {
       <nav className="container mx-auto px-6 flex items-center justify-between">
         <Link 
           href="/" 
+          aria-label="Home"
           className="relative w-10 h-10 md:w-12 md:h-12 hover:scale-110 transition-transform duration-300"
           onClick={(e) => {
             if (pathname === "/") {

@@ -96,8 +96,7 @@ html {
   background: var(--muted-foreground);
 }
 
-/* Glass effect utility */
-.glass {
+@utility glass {
   background: rgba(20, 20, 25, 0.6);
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
@@ -105,8 +104,7 @@ html {
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
-/* Gradient text utility */
-.gradient-text {
+@utility gradient-text {
   background: linear-gradient(135deg, #c4b5fd 0%, var(--primary) 50%, var(--accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -114,174 +112,52 @@ html {
   filter: drop-shadow(0 0 2em rgba(139, 92, 246, 0.3));
 }
 
-/* Text Glow utility */
-.text-glow {
+@utility text-glow {
   text-shadow: 0 0 10px rgba(139, 92, 246, 0.5), 0 0 20px rgba(139, 92, 246, 0.3);
 }
 
-/* Glow effect */
-.glow {
+@utility glow {
   box-shadow: 0 0 20px rgba(167, 139, 250, 0.3), 0 0 40px rgba(99, 102, 241, 0.2);
 }
 
-/* Animation keyframes */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
+@theme {
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 3s ease-in-out infinite;
+  --animate-fade-in-up: fadeInUp 0.6s ease-out forwards;
+  --animate-scale-in: scaleIn 0.8s ease-out forwards;
+  --animate-slide-down: slideDown 0.5s ease-out forwards;
+  --animate-bounce-down: bounceDown 2s ease-in-out infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
   }
-  50% {
-    transform: translateY(-10px);
+
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(167, 139, 250, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(167, 139, 250, 0.6); }
   }
-}
 
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(167, 139, 250, 0.3);
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
   }
-  50% {
-    box-shadow: 0 0 40px rgba(167, 139, 250, 0.6);
+
+  @keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
   }
-}
 
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-.animate-pulse-glow {
-  animation: pulse-glow 3s ease-in-out infinite;
-}
-
-/* Glow button effect */
-.btn-glow {
-  position: relative;
-  box-shadow: 0 0 20px rgba(167, 139, 250, 0.4);
-  transition: all 0.3s ease;
-}
-
-.btn-glow:hover {
-  box-shadow: 0 0 30px rgba(167, 139, 250, 0.6), 0 0 60px rgba(99, 102, 241, 0.3);
-}
-
-/* Brand Buttons */
-.btn-primary {
-  @apply relative rounded-full font-mono font-bold transition-all duration-300 text-white;
-  background: rgba(20, 20, 25, 0.8) !important; /* Force dark background */
-  border: 1px solid rgba(139, 92, 246, 0.3);
-  box-shadow: 0 0 20px rgba(139, 92, 246, 0.1);
-}
-
-.btn-primary span.gradient-text {
-  background: linear-gradient(135deg, #c4b5fd 0%, var(--primary) 50%, var(--accent) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  display: inline-block;
-}
-
-.btn-primary:hover {
-  box-shadow: 0 0 30px rgba(139, 92, 246, 0.4), 0 0 50px rgba(99, 102, 241, 0.2);
-  transform: translateY(-2px);
-  border-color: var(--primary);
-  background: rgba(20, 20, 25, 0.95) !important;
-}
-
-.btn-primary:hover {
-  box-shadow: 0 0 30px rgba(139, 92, 246, 0.5), 0 0 60px rgba(99, 102, 241, 0.3);
-  transform: translateY(-2px);
-  border-color: var(--primary);
-  background: rgba(139, 92, 246, 0.2);
-}
-
-.btn-secondary {
-  @apply bg-background text-muted-foreground rounded-none border border-border font-mono transition-all duration-300;
-}
-
-.btn-secondary:hover {
-  @apply text-foreground border-primary;
-  background: rgba(139, 92, 246, 0.05);
-}
-
-/* Timeline styles */
-.timeline-connector {
-  position: absolute;
-  width: 2px;
-  background: linear-gradient(to bottom, var(--primary), var(--accent));
-}
-
-.timeline-dot {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: white;
-  box-shadow: 0 0 20px rgba(167, 139, 250, 0.5);
-}
-
-/* Hero CSS Animations - replaces framer-motion for performance */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+  @keyframes slideDown {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
+  @keyframes bounceDown {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(10px); }
+    60% { transform: translateY(5px); }
   }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes slideDown {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
-@keyframes bounceDown {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(10px);
-  }
-  60% {
-    transform: translateY(5px);
-  }
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out forwards;
-  opacity: 0;
-}
-
-.animate-scale-in {
-  animation: scaleIn 0.8s ease-out forwards;
-  opacity: 0;
-}
-
-.animate-slide-down {
-  animation: slideDown 0.5s ease-out forwards;
-}
-
-.animate-bounce-down {
-  animation: bounceDown 2s ease-in-out infinite;
 }
 
 /* Animation delay utilities */
