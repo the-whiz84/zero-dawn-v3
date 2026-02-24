@@ -91,8 +91,8 @@ export const projects: Project[] = [
     description:
       "A Blog Website created with Python, Flask and SQLAlchemy with user registration and login flow to post articles and comments.",
     image: "/assets/img/blog.webp",
-    link: "https://blog.the-whiz.dev",
-    linkLabel: "Go to Website",
+    link: "https://github.com/the-whiz84/Capstone_Blog_Project",
+    linkLabel: "View Code",
     tags: ["Python", "Flask", "SQLAlchemy"],
   },
   {
@@ -102,7 +102,7 @@ export const projects: Project[] = [
     image: "/assets/img/organize-it.webp",
     link: "https://todo.the-whiz.dev",
     linkLabel: "Go to Website",
-    tags: ["Flask", "PostgreSQL", "Bootstrap 5"],
+    tags: ["Python", "Flask", "PostgreSQL", "Bootstrap 5"],
   },
   {
     title: "Demo E-Commerce Website",
@@ -111,7 +111,7 @@ export const projects: Project[] = [
     image: "/assets/img/shop.webp",
     link: "https://shop.the-whiz.dev",
     linkLabel: "Go to Website",
-    tags: ["Flask", "Stripe API", "Bootstrap 5"],
+    tags: ["Python", "Flask", "Stripe API", "Bootstrap 5"],
   },
 ];
 
