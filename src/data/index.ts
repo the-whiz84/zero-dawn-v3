@@ -55,7 +55,7 @@ export const profile = {
 export const socials: SocialLink[] = [
   { name: "GitHub", url: "https://github.com/the-whiz84", icon: "Github" },
   { name: "LinkedIn", url: "https://www.linkedin.com/in/radu-chiriac/", icon: "Linkedin" },
-  { name: "X", url: "https://x.com/the_whiz84", icon: "Twitter" },
+  { name: "X", url: "https://x.com/the_whiz84", icon: "X" },
 ];
 
 export const projects: Project[] = [

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import { GithubIcon } from "@/components/icons/BrandIcons";
 
 interface ProjectCardProps {
   title: string;
@@ -35,7 +36,7 @@ export function ProjectCard({ title, description, tags, imageUrl, liveUrl, repoU
             <div className="flex space-x-3">
                {repoUrl && (
                   <Link href={repoUrl} target="_blank" className="text-white hover:text-primary transition-colors">
-                     <Github size={20} />
+                     <GithubIcon size={20} />
                   </Link>
                )}
                {liveUrl && (

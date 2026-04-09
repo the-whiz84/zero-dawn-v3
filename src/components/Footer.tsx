@@ -2,13 +2,14 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter, ArrowUp, Mail } from "lucide-react";
+import { ArrowUp, Mail } from "lucide-react";
+import { GithubIcon, LinkedinIcon, XIcon } from "@/components/icons/BrandIcons";
 import { socials } from "@/data";
 
 const iconMap: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
-  Github,
-  Linkedin,
-  Twitter,
+  Github: GithubIcon,
+  Linkedin: LinkedinIcon,
+  X: XIcon,
 };
 
 export function Footer() {
